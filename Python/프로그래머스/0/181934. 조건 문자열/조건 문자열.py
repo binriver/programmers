@@ -1,5 +1,5 @@
 def solution(ineq, eq, n, m):
-    if ineq == ">" :
+    if ineq == ">":
         if (eq == "=" and n >= m) or (eq == "!" and n > m):
             answer = 1
         else:
