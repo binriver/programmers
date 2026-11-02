@@ -1,24 +1,11 @@
 def solution(code):
     mode = 0
     ret = ""
-    for idx in range(0, len(code)):
+    for idx in range(len(code)):
         if code[idx] == "1":
-            if mode == 0:
-                mode = 1
-            else:
-                mode = 0
+            mode ^= 1
         else:
-            if mode == 0:
-                if idx % 2 == 0:
-                    ret += code[idx]
-                else:
-                    pass
-            else:
-                if idx % 2 == 1:
-                    ret += code[idx]
-                else:
-                    pass
-    if ret == "":
-        ret = "EMPTY"
+            if idx % 2 == mode:
+                ret += code[idx]
         
-    return ret
+    return ret if ret else "EMPTY"
