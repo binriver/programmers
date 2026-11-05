@@ -1,5 +1,5 @@
 def solution(n, slicer, num_list):
-    a, b, c = slicer[0], slicer[1], slicer[2]
+    a, b, c = slicer
     if n == 1:
         answer = num_list[0:b+1]
     elif n == 2:
