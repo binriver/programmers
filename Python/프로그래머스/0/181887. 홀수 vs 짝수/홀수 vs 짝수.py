@@ -1,8 +1,4 @@
 def solution(num_list):
-    odd, even = 0, 0
-    for idx, num in enumerate(num_list):
-        if idx % 2 == 0:
-            odd += num
-        else:
-            even += num
+    odd = sum(num_list[::2])
+    even = sum(num_list[1::2])
     return odd if odd >= even else even
