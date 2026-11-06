@@ -1,6 +1,6 @@
 def solution(todo_list, finished):
     answer = []
-    for idx, fin in enumerate(finished):
-        if fin == 0:
-            answer.append(todo_list[idx])
+    for x, fin in zip(todo_list, finished):
+        if not fin:
+            answer.append(x)
     return answer
