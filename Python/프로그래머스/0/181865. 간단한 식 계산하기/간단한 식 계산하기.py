@@ -1,8 +1,9 @@
 def solution(binomial):
-    answer = binomial.split()
-    if answer[1] == '+':
-        return int(answer[0]) + int(answer[2])
-    elif answer[1] == '-':
-        return int(answer[0]) - int(answer[2])
+    a, op, b = binomial.split()
+    a, b = int(a), int(b)
+    if op == "+":
+        return a + b
+    elif op == "-":
+        return a - b
     else:
-        return int(answer[0]) * int(answer[2])
+        return a * b
