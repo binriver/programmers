@@ -1,8 +1,11 @@
 def solution(arr):
-    if len(arr) > len(arr[0]):
-        for i in range(len(arr)):
-            arr[i] += [0] * (len(arr) - len(arr[i]))
-    elif len(arr) < len(arr[0]):
-        for j in range(len(arr[0]) - len(arr)):
-            arr.append([0]*len(arr[j]))
+    l_row = len(arr)
+    l_col = len(arr[0])
+    
+    if l_row > l_col:
+        for i in range(l_row):
+            arr[i] += [0] * (l_row-l_col)
+    elif l_row < l_col:
+        for j in range(l_col-l_row):
+            arr.append([0]*l_col)
     return arr
