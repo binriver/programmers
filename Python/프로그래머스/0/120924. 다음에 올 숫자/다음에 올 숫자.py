@@ -1,8 +1,9 @@
 def solution(common):
-    a1, a2, a3 = common[0], common[1], common[2]
-    if a3 - a2 == a2 - a1:
-        d = a2 - a1
-        return a1 + d * len(common)
+    a0 ,a1, a2 = common[0:3]
+    
+    if a2 - a1 == a1 - a0:
+        d = a1 - a0
+        return common[-1] + d
     else:
-        r = a2 / a1
-        return a1 * (r ** len(common))
+        r = a1 // a0
+        return common[-1] * r
