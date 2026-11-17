@@ -1,8 +1,7 @@
 def solution(n):
     answer = 0
-    i = 0
-    while i != n:
-        i += 1
+    
+    for _ in range(n):
         answer += 1
         while answer % 3 == 0 or "3" in str(answer):
             answer += 1
