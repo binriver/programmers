@@ -10,9 +10,9 @@ def solution(polynomial):
         else:
             b += int(num)        
             
-    if a > 0 and b > 0:
-        return f"x + {b}" if a == 1 else f"{a}x + {b}" 
-    elif a > 0 and b == 0:
-        return f"x" if a == 1 else f"{a}x"
-    elif a == 0 and b > 0:
+    if a == 0:
         return f"{b}"
+    elif a == 1:
+        return f"x" if b == 0 else f"x + {b}"
+    else:
+        return f"{a}x" if b == 0 else f"{a}x + {b}"
