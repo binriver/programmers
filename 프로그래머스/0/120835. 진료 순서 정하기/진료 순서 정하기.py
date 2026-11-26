@@ -1,9 +1,7 @@
 def solution(emergency):
     answer = []
+    e = sorted(emergency, reverse=True)
+    
     for i in emergency:
-        tmp = 1
-        for j in emergency:
-            if i < j:
-                tmp += 1
-        answer.append(tmp)
+        answer.append(e.index(i)+1)
     return answer
